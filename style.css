@@ -1,5 +1,6 @@
 :root{
     --Dark_cyan: hsl(158, 36%, 37%);
+    --Darker_cyan: hsl(158, 42%, 22%);
     --Cream: hsl(30, 38%, 92%);
     --Very_dark_blue: hsl(212, 21%, 14%);
     --Dark_grayish_blue: hsl(228, 12%, 48%);
@@ -26,12 +27,14 @@ body{
   text-align: left;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 .container{
-  max-width: 500px;
+  max-width: 600px;
   padding: 1.5rem 1rem;
   border-radius: 50%;
+    
 }
 
 .container article:first-child img{
@@ -50,6 +53,7 @@ h2{
   color: var(--Dark_grayish_blue);
   font-weight: 500;
   text-transform: uppercase;
+  letter-spacing: 0.4rem;
 }
 
 h1{
@@ -58,6 +62,7 @@ h1{
   line-height: 1;
   margin: 0.9rem 0;
 }
+
 
 .container p{
   color: var(--Dark_grayish_blue);
@@ -81,6 +86,7 @@ h1{
 .container ul li:last-child{
   color: var(--Dark_grayish_blue);
   font-size: 0.8rem;
+  text-decoration: line-through
 }
 
 .price{
@@ -110,6 +116,10 @@ h1, .price{
   align-items: center;
 }
 
+.container .btn:hover{
+  background-color: var(--Darker_cyan);
+}
+
 .container .btn img{
   margin-right: 0.5rem;
 }
@@ -117,6 +127,7 @@ h1, .price{
 .attribution { 
   font-size: 14px; 
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .attribution a {
@@ -125,4 +136,21 @@ h1, .price{
 
 footer{
   visibility: hidden;
+}
+
+/* screen 1440px */
+
+@media (min-width: 1440px) {
+  .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container article:first-child img{
+    border-radius: 0.6rem 0 0 0.6rem;
+    height: 100%;
+  }
+  .container article:last-child{
+    margin: 0;
+    border-radius: 0 0.6rem 0.6rem 0;
+  }
 }
