@@ -27,13 +27,12 @@ body{
   text-align: left;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: calc(100vh - 1px);
 }
 
 .container{
   max-width: 600px;
   padding: 1.5rem 1rem;
-  border-radius: 50%;
     
 }
 
@@ -140,7 +139,7 @@ footer{
 
 /* screen 1440px */
 
-@media (min-width: 1440px) {
+@media (min-width: 440px) {
   .container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
